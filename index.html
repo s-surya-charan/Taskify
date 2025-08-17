@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taskify</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="todo-container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">📝 Taskify</h1>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <!-- Input row -->
+    <div class="input-row">
+      <input id="taskInput" type="text" placeholder="Enter a new task…" />
+      <input id="taskDate" type="date" />
+      <select id="taskCategory">
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+      <button id="addTaskBtn" class="btn-primary">➕ Add</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-row">
+      <input id="searchBox" type="text" placeholder="🔍 Search tasks…" />
+      <select id="filterCategory">
+        <option value="all">All Categories</option>
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Study">Study</option>
+        <option value="Shopping">Shopping</option>
+      </select>
+      <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+
+    <!-- Empty state -->
+    <p id="emptyState" class="empty">No tasks yet — add one above! ✨</p>
+
+    <!-- Task list -->
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <!-- Always load JS with defer so the DOM exists before it runs -->
+  <script src="script.js" defer></script>
+</body>
+</html>
